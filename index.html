@@ -53,6 +53,13 @@
         .abilityCheckbox {
             margin: 10px;
         }
+        #videoPlayer {
+            display: none;
+            margin: 20px auto;
+            width: 100%;
+            max-width: 600px;
+            border: 5px solid #fff; /* Optional border */
+        }
     </style>
 </head>
 <body>
@@ -88,6 +95,11 @@
         <p>Your intent has been set. Trust in the process and keep your focus. The manifestation will occur in reality when the time is right.</p>
     </div>
 
+    <video id="videoPlayer" controls loop>
+        <source src="https://github.com/mysticwavetech/Ghl05/raw/main/210634_small.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
     <script>
         document.getElementById('manifestButton').addEventListener('click', function() {
             document.getElementById('selectAbilitiesDiv').style.display = 'block';
@@ -114,8 +126,10 @@
             document.getElementById('confirmationMessage').innerHTML = '<p>Your intent has been set. Trust in the process and keep your focus. The manifestation will occur in reality when the time is right.</p>';
             document.getElementById('confirmationMessage').style.display = 'block';
 
-            // Here you would typically send the user's selected abilities to a backend or store them
-            console.log("Selected Abilities:", selectedAbilities.join(", "));
+            // Show the video player, center it, and play the video on repeat
+            const videoPlayer = document.getElementById('videoPlayer');
+            videoPlayer.style.display = 'block';
+            videoPlayer.play();
         });
     </script>
 
